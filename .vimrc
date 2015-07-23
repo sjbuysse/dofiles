@@ -105,3 +105,12 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
+
+"open NERDtree automatically if no arguments were given to vim
+function! StartUp()                                                                                                                                                                                         
+    if 0 == argc()
+        NERDTree
+    end
+endfunction
+
+autocmd VimEnter * call StartUp()
