@@ -11,11 +11,13 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " add any github plugin using the 'user/repository' format or 'user/repository.git' format
-Plugin 'jiangmiao/auto-pairs.git'
+" when adding a new plugin, open vim and issue the :PluginInstall command
+Plugin 'jiangmiao/auto-pairs.git' "automatically pair symbols like () and {}
 Plugin 'scrooloose/nerdtree.git'
-Plugin 'scrooloose/nerdcommenter.git'
-Plugin 'altercation/vim-colors-solarized.git'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdcommenter.git' "toggle comments with ,c<space>
+Plugin 'altercation/vim-colors-solarized.git' "solarized theme
+Plugin 'Valloric/YouCompleteMe' "Auto completion
+Plugin 'tpope/vim-surround' "change surrounding brackets with cs({
 
 " All of your Plugins must be added before the following line
 call vundle#end()
