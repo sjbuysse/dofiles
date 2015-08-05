@@ -14,6 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 " when adding a new plugin, open vim and issue the :PluginInstall command
 Plugin 'jiangmiao/auto-pairs.git' "automatically pair symbols like () and {}
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'sukima/xmledit' "automatically close html tags
 Plugin 'scrooloose/nerdcommenter.git' "toggle comments with ,c<space>
 Plugin 'altercation/vim-colors-solarized.git' "solarized theme
 Plugin 'Valloric/YouCompleteMe' "Auto completion
@@ -116,3 +117,5 @@ function! StartUp()
 endfunction
 
 autocmd VimEnter * call StartUp()
+
+
