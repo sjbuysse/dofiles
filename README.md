@@ -10,6 +10,12 @@ Make symbolic links for vim and tmux, run in homefolder
 => ln -s /dotfiles/.vimrc
 => ln -s /dotfiles/.tmux.conf
 
+to make xmledit work for htmlfiles:
+after installing
+=> cd ~/.vim/xmledit/ftplugin
+=> rm html.vim
+=>ln -s xml.vim html.vim
+
 Install plugins using vundle, open vim
 => vim
 run the command
