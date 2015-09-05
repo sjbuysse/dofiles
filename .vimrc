@@ -18,7 +18,8 @@ Plugin 'sukima/xmledit' "automatically close html tags
 Plugin 'scrooloose/nerdcommenter.git' "toggle comments with ,c<space>
 Plugin 'altercation/vim-colors-solarized.git' "solarized theme
 Plugin 'Valloric/YouCompleteMe' "Auto completion
-Plugin 'tpope/vim-surround' "change surrounding brackets with cs({
+Plugin 'tpope/vim-surround' "change surrounding brackets with cs({, or delete with ds(
+Plugin 'sukima/xmledit' "autoclose html tags
 
 " All of your Plugins must be added before the following line
 call vundle#end()

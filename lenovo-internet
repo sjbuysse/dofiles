@@ -1,0 +1,30 @@
+with 'lspci | egrep -i --color 'network|ethernet' you can find out what chipset you have 
+(I have broadcom BCM43228)
+
+you need to install the STA broacom drivers (closed source)
+there are some on the ubuntu installation disk
+
+first install dkms
+cd /cdrom/pool/main/d/dkms
+sudo dpkg -i dkms*
+
+then patch
+cd /cdrom/pool/main/p/patch
+sudo dpkg -i patch*
+
+then fakeroot\cd /cdrom/pool/main/f/fakeroot
+sudo dpkg -i fakeroot*
+
+now the bcmwl driver
+cd /cdrom/pool/restricted/b/bcmwl
+sudo dpkg -i bcmwl-kernel-source*
+
+it's possible that this last one gives you an error like this
+"ERROR (dkms apport): kernel package linux-headers-3.16.0-30-generic is not supported"
+this means that you're kernel is too new for the bcmwl driver and you need to download the latest version from the ubuntu repository.
+You'll probably need the 64 bit version (but check with uname -m)
+http://mirrors.kernel.org/ubuntu/pool/restricted/b/bcmwl/bcmwl-kernel-source_6.30.223.248+bdcom-0ubuntu0.1_amd64.deb
+
+wired connection goes trough Realtek Semiconductor Co., Ltd. RTL8111/8168/8411
+the following link might get you somewhere
+https://unixblogger.wordpress.com/2011/10/18/the-pain-of-an-realtek-rtl8111rtl8168-ethernet-card/
