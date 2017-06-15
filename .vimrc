@@ -32,9 +32,9 @@ runtime macros/matchit.vim
 set modelines=0
 
 set number
-set tabstop=4 "tabs are 3 spaces big (smaller than default), this can be tabs that you make yourself, or ones that you copy into the file
+set tabstop=2 "tabs are 3 spaces big (smaller than default), this can be tabs that you make yourself, or ones that you copy into the file
 set expandtab "use spaces characters in stead of tab characters
-set shiftwidth=4 "3 spaces are used with indent commands in normal mode (with the keys <>)
+set shiftwidth=4 "4 spaces are used with indent commands in normal mode (with the keys <>)
 set softtabstop=4 "finetunes the amount of whitespaces in insert mode, you want this to be equal to shiftwidth to get consistent indentation in between normal and insert mode                  
 
 "Next are a few options that just make things better:
@@ -89,6 +89,8 @@ nnoremap <C-l> <C-w>l
 set ignorecase
 set smartcase
 "apply substitutions always globally on a line, so instead of :%s/foo/bar/g you just type :%s/foo/bar/
+"Note that if you now use the /g tag, it will invert this behaviour and only
+"substitute the first occurrence
 set gdefault
 "highlight searching
 set incsearch
@@ -118,4 +120,9 @@ endfunction
 
 autocmd VimEnter * call StartUp()
 
-
+" Console log from insert mode; Puts focus inside parentheses
+imap cll console.log();<Esc>==f(a
+" Console log from visual mode on next line, puts visual selection inside parentheses
+vmap cll yocll<Esc>p
+" Console log from normal mode, inserted on next line with word your on inside parentheses
+nmap cll yiwocll<Esc>p 
