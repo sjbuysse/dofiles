@@ -1,6 +1,9 @@
 # dotfiles
 To install run                                                                                                                                                        
 => git clone https://github.com/sjbuysse/dotfiles ~/dotfiles
+
+If you still need to install vim, make sure it's compiled with python support to be able to install YouCompleteMe
+You could get the pi-rho PPA repository where vim always has python support
  
 Delete current .vim folder and .vimrc file, run in homefolder
 => rm -rf .vim/
@@ -26,6 +29,9 @@ Install development tools and CMake:
 => sudo apt-get install build-essential cmake
 Make sure you have Python headers installed: 
 => sudo apt-get install python-dev
+If you want JavaScript autocompletion you have to compile YCM with the '--tern-completer' option
+for this you need to install nodejs and npm
+=> sudo apt-get install nodejs npm
 Install YMC
 => cd ~/.vim/bundle/YouCompleteMe
-=> ./install.sh
+=> ./install.sh --tern-completer
