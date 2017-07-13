@@ -78,7 +78,7 @@ if [ "$color_prompt" = yes ]; then
     # a file has been added, but not commited
     then echo "'$YELLOW'"$(__git_ps1 "(%s)")
     # the state is clean, changes are commited
-    else echo "'$CYAN'"$(__git_ps1 "(%s)")
+    else echo "'$YELLOW'"$(__git_ps1 "(%s)")
     fi)'$CYAN' ' 
 else
     PS1='${debian_chroot:+($debian_chroot)}\u:\w\$ '
