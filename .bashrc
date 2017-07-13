@@ -64,6 +64,7 @@ BLUE="\[\033[34m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
 CYAN="\[\033[0;36m\]"
 GREEN="\[\033[0;32m\]"
+WHITE="\[\033[1;37m\]"
 GIT_PS1_SHOWDIRTYSTATE=true
 export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
@@ -79,7 +80,7 @@ if [ "$color_prompt" = yes ]; then
     then echo "'$YELLOW'"$(__git_ps1 "(%s)")
     # the state is clean, changes are commited
     else echo "'$YELLOW'"$(__git_ps1 "(%s)")
-    fi)'$CYAN' ' 
+    fi)'$WHITE' ' 
 else
     PS1='${debian_chroot:+($debian_chroot)}\u:\w\$ '
 fi
