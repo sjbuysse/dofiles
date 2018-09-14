@@ -32,10 +32,10 @@ runtime macros/matchit.vim
 set modelines=0
 
 set number
-set tabstop=2 "tabs are 2 spaces big (smaller than default), this can be tabs that you make yourself, or ones that you copy into the file
+set tabstop=4 "tabs are 4 spaces big (smaller than default), this can be tabs that you make yourself, or ones that you copy into the file
 set expandtab "use spaces characters in stead of tab characters
-set shiftwidth=2 "2 spaces are used with indent commands in normal mode (with the keys <>)
-set softtabstop=2 "finetunes the amount of whitespaces in insert mode, you want this to be equal to shiftwidth to get consistent indentation in between normal and insert mode                  
+set shiftwidth=4 "4 spaces are used with indent commands in normal mode (with the keys <>)
+set softtabstop=4 "finetunes the amount of whitespaces in insert mode, you want this to be equal to shiftwidth to get consistent indentation in between normal and insert mode                  
 
 "Next are a few options that just make things better:
 set encoding=utf-8 "set character encoding to unicode
