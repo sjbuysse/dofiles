@@ -19,6 +19,7 @@ Plugin 'scrooloose/nerdcommenter.git' "toggle comments with ,c<space>
 Plugin 'altercation/vim-colors-solarized.git' "solarized theme
 Plugin 'Valloric/YouCompleteMe' "Auto completion
 Plugin 'tpope/vim-surround' "change surrounding brackets with cs({, or delete with ds(
+Plugin 'tpope/vim-abolish' "coerce snake_case to camelCase (crc), MixedCase(crm), UPPER_CASE (cru), space case (cr<space>) or vice versa (crs)
 
 " All of your Plugins must be added before the following line
 call vundle#end()
