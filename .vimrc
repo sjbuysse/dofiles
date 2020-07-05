@@ -127,3 +127,11 @@ imap cll console.log();<Esc>==f(a
 vmap cll yocll<Esc>p
 " Console log from normal mode, inserted on next line with word your on inside parentheses
 nmap cll yiwocll<Esc>p 
+
+
+" Console log inside stream from insert mode; Puts focus inside parentheses
+imap csll tap((variable) => console.log(variable)),;<Esc>==f(a
+" Console log from visual mode on next line, puts visual selection inside parentheses
+vmap csll yocsll<Esc>p
+" Console log from normal mode, inserted on next line with word your on inside parentheses
+nmap cll yiwocsll<Esc>p 
