@@ -1,0 +1,8 @@
+source ~/.vimrc
+set surround
+set noexpandtab "use tabs when indenting in normal mode (with the keys <>)
+
+" Won't work in visual mode (with vmap) for some reason.
+" Use default map of <c-/> for that.
+nnoremap ,c<space> :action CommentByLineComment<cr>
+
