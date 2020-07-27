@@ -135,3 +135,7 @@ imap csll tap((variable) => console.log(variable)),;<Esc>==f(a
 vmap csll yocsll<Esc>p
 " Console log from normal mode, inserted on next line with word your on inside parentheses
 nmap cll yiwocsll<Esc>p 
+
+" Map kj or jk to Escape 
+inoremap jk <Esc>
+inoremap kj <Esc>
