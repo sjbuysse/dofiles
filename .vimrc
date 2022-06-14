@@ -51,7 +51,6 @@ set cursorline "highlight the current line
 set ttyfast "fast scrolling
 set ruler
 set laststatus=2 "status line is always displayed (with current mode, filename, ...)
-set undofile "create a .un file so you can undo changes even after closing and reopening a file
 let mapleader = "," "remap leader key to ,
 
 "Solarized color theme
@@ -131,10 +130,6 @@ nmap cll yiwocll<Esc>p
 
 " Console log inside stream from insert mode; Puts focus inside parentheses
 imap csll tap((variable) => console.log(variable)),<Esc>==f(a
-" Console log from visual mode on next line, puts visual selection inside parentheses
-vmap csll yocsll<Esc>p
-" Console log from normal mode, inserted on next line with word your on inside parentheses
-nmap cll yiwocsll<Esc>p 
 
 " Map kj or jk to Escape 
 inoremap jk <Esc>
